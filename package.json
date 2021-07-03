@@ -1,13 +1,13 @@
 {
-  "name": "cli",
+  "name": "wasmark",
   "version": "0.1.0",
   "description": "",
-  "bin": "index.js",
+  "bin": "./src/index.js",
   "scripts": {
     "update:common": "yarn add @ship-website-demo/common@latest",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
     "start:dev": "nodemon",
-    "build": "tsc"
+    "build": "rm -rf ./dist && tsc && cp package.json ./dist && cp -r public ./dist"
   },
   "repository": {
     "type": "git",
@@ -24,13 +24,15 @@
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^10.0.0",
-    "koa-static": "^5.0.0"
+    "koa-static": "^5.0.0",
+    "yargs": "^17.0.1"
   },
   "devDependencies": {
     "@types/koa": "^2.13.3",
     "@types/koa-bodyparser": "^4.3.1",
     "@types/koa-router": "^7.4.2",
     "@types/koa-static": "^4.0.1",
+    "@types/yargs": "^17.0.1",
     "nodemon": "^2.0.9",
     "ts-node": "^10.0.0",
     "tsconfig-paths": "^3.9.0",

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "./dist/src",
     "baseUrl": ".",
     "target": "es6",
     "lib": [
@@ -23,6 +23,6 @@
     "strictPropertyInitialization": false
   },
   "include": [
-    "src/**/*",
+    "src/**/*", "public",
   ]
 }
