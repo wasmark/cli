@@ -2,14 +2,14 @@ import Router from 'koa-router';
 import { getArgv } from '../../argv';
 import { retiveContracts } from '../../contract';
 import { router } from './router';
-import { Config } from '../../common';
+import { TestParams } from '../../common';
 
 const userRouter = new Router();
 
 userRouter.get('/', async (ctx, next) => {
   const contracts = await retiveContracts();
   const argv = getArgv();
-  const body: Config = {
+  const body: TestParams = {
     endpoint: argv.endpoint,
     contracts: contracts,
     mnemonics: argv.mnemonics || [],

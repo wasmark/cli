@@ -2,6 +2,7 @@
 import yargs from 'yargs/yargs';
 import { createApp } from './create-app';
 import { Argv, storeArgv } from './argv';
+import { checkContractExist } from './contract';
 
 const argv = yargs(process.argv.slice(2)).options({
   c: { type: 'array', aliias: 'contract' },
@@ -27,4 +28,11 @@ storeArgv({
   $0: argv.$0,
 });
 
-createApp(argv.p);
+checkContractExist().then(exist => {
+  if (!exist) {
+    console.error('can\'t find contracts by specific path')
+    return process.exit();
+  }
+  
+  createApp(argv.p);
+}, err => console.error(err));

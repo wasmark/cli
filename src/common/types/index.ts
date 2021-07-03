@@ -1,4 +1,4 @@
-export interface Config {
+export interface TestParams {
   endpoint?: string;
   contracts: RetrivedContract[];
   mnemonics: string[];
