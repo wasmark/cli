@@ -1,7 +1,7 @@
 export interface Argv {
   contractPaths?: string[];
   contractsDir?: string;
-  endpoint?: string;
+  endpoint: string;
   mnemonics?: string[];
   port: number;
   _: (string | number)[];

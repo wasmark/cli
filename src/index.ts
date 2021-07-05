@@ -7,12 +7,10 @@ import { checkContractExist } from './contract';
 const argv = yargs(process.argv.slice(2)).options({
   c: { type: 'array', aliias: 'contract' },
   d: { type: 'string', aliias: 'dir' },
-  e: { type: 'string', aliias: 'endpoint' },
+  e: { type: 'string', aliias: 'endpoint', demandOption: true },
   m: { type: 'array', aliias: 'mnemonic' },
   p: { type: 'number', default: 4000, aliias: 'port' },
 }).parseSync();
-
-console.log('argv', argv);
 
 function checkArgv(argv: Argv): boolean {
   return true

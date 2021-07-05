@@ -13,9 +13,9 @@ app.use(staticFiles('public'));
 app.use(bodyparser());
 
 app.use(async (ctx, next) => {
-    console.log("--------------------------");
-    console.count("request count");
-    console.log(ctx.request.method.toUpperCase(), ': ', ctx.request.path);
+    // console.log("--------------------------");
+    // console.count("request count");
+    // console.log(ctx.request.method.toUpperCase(), ': ', ctx.request.path);
     // console.log('session', ctx.session);
     
     ctx.set('Access-Control-Allow-Origin', '*')

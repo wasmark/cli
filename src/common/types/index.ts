@@ -1,5 +1,5 @@
 export interface TestParams {
-  endpoint?: string;
+  endpoint: string;
   contracts: RetrivedContract[];
   mnemonics: string[];
 }
@@ -7,5 +7,5 @@ export interface TestParams {
 export interface RetrivedContract {
   name: string;
   path: string;
-  artifact: Buffer;
+  artifact: Uint8Array;
 }
