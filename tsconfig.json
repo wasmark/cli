@@ -23,6 +23,6 @@
     "strictPropertyInitialization": false
   },
   "include": [
-    "src/**/*", "public",
+    "src/**/*", "a",
   ]
 }

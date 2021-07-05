@@ -9,7 +9,7 @@ const app = new Koa();
 
 app.keys = ['lnsktdswp'];
 
-app.use(staticFiles('public'));
+app.use(staticFiles(path.resolve(__dirname, '../public')));
 app.use(bodyparser());
 
 app.use(async (ctx, next) => {
